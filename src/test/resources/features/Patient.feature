@@ -20,8 +20,8 @@ Feature: Patient
     And I click on confirm create new patient
     And I handle the alert
     And I close the happy birthday popup if avaiable
-    Then I should get the added patient name as '<expected_patient_name>'
+    Then I should get the added patient name as '<expected_patient_name>' and alert as '<alert_message>'
     Examples:
-      | username | password | language         | fname | lname | dob        | gender | expected_patient_name                 |
-      | admin    | pass     | English (Indian) | john  | wick  | 2023-11-20 | Male   | Medical Record Dashboard - john wick  |
-#      | admin    | pass     | English (Indian) | peter | wick  | 2023-11-21 | Male   | Medical Record Dashboard - peter wick |
+      | username | password | language         | fname | lname | dob        | gender | expected_patient_name                | alert_message |
+      | admin    | pass     | English (Indian) | john  | wick  | 2023-11-20 | Male   | Medical Record Dashboard - john wick | Tobacco       |
+      | admin    | pass     | English (Indian) | peter | wick  | 2023-11-21 | Male   | Medical Record Dashboard - peter wick |Tobacco       |
