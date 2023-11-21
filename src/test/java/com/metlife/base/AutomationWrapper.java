@@ -4,7 +4,7 @@ import io.cucumber.java.After;
 import org.openqa.selenium.WebDriver;
 
 public class AutomationWrapper {
-    public static WebDriver driver;
+    public WebDriver driver;
 
     @After
     public void endScenario()
