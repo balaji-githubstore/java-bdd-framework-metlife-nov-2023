@@ -1,7 +1,9 @@
 package com.metlife.steps;
 
+import com.metlife.base.AutomationWrapper;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 
 import java.util.List;
 import java.util.Map;
@@ -10,18 +12,17 @@ public class PatientSteps {
 
     @When("I click on patient menu")
     public void i_click_on_patient_menu() {
-        
+        AutomationWrapper.driver.findElement(By.xpath("//div[text()='Patient']")).click();
     }
     @When("I click on new-search menu")
     public void i_click_on_new_search_menu() {
-        
+        AutomationWrapper.driver.findElement(By.xpath("//div[text()='New/Search']")).click();
     }
     @When("I fill the patient details")
     public void i_fill_the_patient_details(io.cucumber.datatable.DataTable dataTable) {
 
        List<Map<String,String>> lists=  dataTable.asMaps();
         System.out.println(lists);
-
         System.out.println(lists.get(0));
 
         System.out.println(lists.get(0).get("firstname"));

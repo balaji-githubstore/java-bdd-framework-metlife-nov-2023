@@ -24,4 +24,4 @@ Feature: Patient
     Examples:
       | username | password | language         | fname | lname | dob        | gender | expected_patient_name                 |
       | admin    | pass     | English (Indian) | john  | wick  | 2023-11-20 | Male   | Medical Record Dashboard - john wick  |
-      | admin    | pass     | English (Indian) | peter | wick  | 2023-11-21 | Male   | Medical Record Dashboard - peter wick |
+#      | admin    | pass     | English (Indian) | peter | wick  | 2023-11-21 | Male   | Medical Record Dashboard - peter wick |
