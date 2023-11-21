@@ -16,7 +16,7 @@ public class LoginSteps {
     public void i_have_browser_with_open_emr_application() {
         AutomationWrapper.driver=new ChromeDriver();
         AutomationWrapper.driver.manage().window().maximize();
-        AutomationWrapper.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
+        AutomationWrapper.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         AutomationWrapper.driver.get("https://demo.openemr.io/b/openemr");
     }
     @When("I enter username as {string}")
