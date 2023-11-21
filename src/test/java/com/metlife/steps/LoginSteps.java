@@ -16,6 +16,9 @@ public class LoginSteps {
     public LoginSteps(AutomationWrapper wrapper)
     {
         this.wrapper=wrapper;
+
+        System.out.println(wrapper.count);
+        wrapper.count=1;
     }
 
     @Given("I have browser with OpenEMR application")

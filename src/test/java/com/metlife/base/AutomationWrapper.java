@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class AutomationWrapper {
     public WebDriver driver;
+    public int count=0;
 
     @After
     public void endScenario()

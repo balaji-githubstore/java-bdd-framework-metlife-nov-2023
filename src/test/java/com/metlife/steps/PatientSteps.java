@@ -21,6 +21,7 @@ public class PatientSteps {
     public PatientSteps(AutomationWrapper wrapper)
     {
         this.wrapper=wrapper;
+        System.out.println(wrapper.count);
     }
 
     @When("I click on patient menu")
