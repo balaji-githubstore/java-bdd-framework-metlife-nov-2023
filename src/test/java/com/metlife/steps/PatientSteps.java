@@ -1,6 +1,8 @@
 package com.metlife.steps;
 
 import com.metlife.base.AutomationWrapper;
+import com.metlife.pages.LoginPage;
+import com.metlife.pages.MainPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
@@ -17,6 +19,7 @@ public class PatientSteps {
 
     private static String actualAlertText;
     private AutomationWrapper wrapper;
+    private MainPage mainPage;
 
     public PatientSteps(AutomationWrapper wrapper)
     {
@@ -24,14 +27,22 @@ public class PatientSteps {
         System.out.println(wrapper.count);
     }
 
+    public void initPageObjects()
+    {
+         mainPage = new MainPage(wrapper.driver);
+    }
+
     @When("I click on patient menu")
     public void i_click_on_patient_menu() {
-        wrapper.driver.findElement(By.xpath("//div[text()='Patient']")).click();
+
+//        wrapper.driver.findElement(By.xpath("//div[text()='Patient']")).click();
+        mainPage.clickOnPatientMenu();
     }
 
     @When("I click on new-search menu")
     public void i_click_on_new_search_menu() {
-        wrapper.driver.findElement(By.xpath("//div[text()='New/Search']")).click();
+//        wrapper.driver.findElement(By.xpath("//div[text()='New/Search']")).click();
+        mainPage.clickOnPatientMenu();
     }
 
     @When("I fill the patient details")
