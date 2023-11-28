@@ -3,7 +3,9 @@ package com.metlife.pages;
 import com.metlife.base.WebDriverKeywords;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.springframework.stereotype.Component;
 
+//@Component
 public class LoginPage extends WebDriverKeywords {
     private By usernameLocator=By.id("authUser");
     private By passwordLocator=By.cssSelector("#clearPass");
@@ -11,11 +13,11 @@ public class LoginPage extends WebDriverKeywords {
     private By errorLocator=By.xpath("//p[contains(text(),'Invalid')]");
     //private WebDriver driver;
 
-    public LoginPage(WebDriver driver) {
-
-        super(driver);
-       // this.driver = driver;
-    }
+//    public LoginPage(WebDriver driver) {
+//
+//        super(driver);
+//       // this.driver = driver;
+//    }
 
 
     public void enterUsername(String username) {

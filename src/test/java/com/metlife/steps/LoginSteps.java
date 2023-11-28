@@ -8,32 +8,35 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.Assert;
 
 import java.time.Duration;
 
 public class LoginSteps {
 
-    private AutomationWrapper wrapper;
+//    private AutomationWrapper wrapper;
+    @Autowired
     private LoginPage loginPage;
+    @Autowired
     private MainPage mainPage;
-    public LoginSteps(AutomationWrapper wrapper)
-    {
-        this.wrapper=wrapper;
-        System.out.println(wrapper.count);
-        wrapper.count=1;
-    }
+//    public LoginSteps(AutomationWrapper wrapper)
+//    {
+//        this.wrapper=wrapper;
+//        System.out.println(wrapper.count);
+//        wrapper.count=1;
+//    }
 
-    public void initPageObjects()
-    {
-         loginPage=new LoginPage(wrapper.driver);
-         mainPage=new MainPage(wrapper.driver);
-    }
+//    public void initPageObjects()
+//    {
+//         loginPage=new LoginPage(wrapper.driver);
+//         mainPage=new MainPage(wrapper.driver);
+//    }
 
     @Given("I have browser with OpenEMR application")
     public void i_have_browser_with_open_emr_application() {
-        wrapper.launchBrowser();
-        initPageObjects();
+//        wrapper.launchBrowser();
+//        initPageObjects();
     }
     @When("I enter username as {string}")
     public void i_enter_username_as(String username) {

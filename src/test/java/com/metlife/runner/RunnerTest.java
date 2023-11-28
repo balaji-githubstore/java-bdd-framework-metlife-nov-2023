@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
       //  ,dryRun = true
         ,publish = false
         ,plugin = {"html:target/cucumber-report.html"}
-        ,tags="@patient"
+        ,tags="@addpatient"
 )
 
 public class RunnerTest extends AbstractTestNGCucumberTests {
